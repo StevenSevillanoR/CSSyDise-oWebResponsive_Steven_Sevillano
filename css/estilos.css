@@ -1,0 +1,124 @@
+@font-face{
+	font-family: 'DancingScript';
+	src: url('../font/DancingScript-Regular.ttf');
+}
+body{
+	height: 1em;
+	text-align: center;
+	font-family: 'DancingScript';
+	background-color: #02010a;
+}
+.cabecera{
+	width: 100%;
+	background-color: #5b7989;
+	border-radius: 10px 10px 0 0;
+	text-shadow: 2px 2px 2px #02010a;
+	color: white;
+	display: flex;
+	flex-flow: row wrap;
+}
+.cabecera div{
+	margin-left: 1%;
+	margin-right: 1%;
+	width: 48%;
+}
+div h2 {
+	text-align: right;
+}
+div h1{
+	text-align: left;
+}
+h2 a{
+	color: white;
+	text-decoration: none;
+}
+.imagenCentral{
+	text-align: center;
+	width: 100%;
+	background-color: #82c3a6;
+}
+.imagenCentral img{
+	padding: 1%;
+	width: 98%;
+}
+.imagenesSecundarias{
+	margin: auto;
+	width: 100%;
+	background-color:  #d5c75f;
+	border: 1px;
+	display: flex;
+	flex-flow: row wrap;
+}
+.imagenesSecundarias div{
+	flex: 1 1 50%;
+	text-align: center;
+}
+.pie div{
+	width: 24%;
+	height: 100%;
+	margin-left: 1%; 
+}
+p img{
+	margin: 2%;
+	width: 96%;
+}
+footer{
+	background-color: #C6d5c5;
+	border-radius: 0 0 10px 10px;
+}
+li{
+	list-style-type: none;
+}
+.pie{
+	text-align: left;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+.pie img{
+	border-radius: 1px;
+	width: 20px;
+	height: 15px;
+}
+.cuerpoRetratos, .cuerpoPaisajes{
+	background-color:  #d5c75f;
+	border: 1px;
+	display: flex;
+	flex-flow: row wrap;
+}
+div[id*=foto]{
+	flex: 1 1 33%;
+	text-align: center;
+}
+@media screen and (max-width: 640px){
+
+	.cabecera div{
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+	}
+	#columna1{
+		width: 100%;
+	}
+	#columna2{
+		width: 100%;
+	}
+	div h2 {
+		text-align: center;
+	}
+	div h1{
+		text-align: center;
+	}
+	.pie div{
+		text-align: center;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.imagenesSecundarias div{
+		flex: 1 1 100%;
+	}
+	div[id*=foto]{
+	flex: 1 1 100%;
+	text-align: center;
+}
+}
