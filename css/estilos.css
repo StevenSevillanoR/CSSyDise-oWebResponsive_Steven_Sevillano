@@ -8,6 +8,10 @@ body{
 	font-family: 'DancingScript';
 	background-color: #02010a;
 }
+#contenido{
+	align-self: center;
+	width: 900px;
+}
 .cabecera{
 	width: 100%;
 	background-color: #5b7989;
@@ -46,6 +50,7 @@ h2 a{
 	width: 100%;
 	background-color:  #d5c75f;
 	border: 1px;
+	perspective: 100%;
 	display: flex;
 	flex-flow: row wrap;
 }
@@ -61,6 +66,7 @@ h2 a{
 p img{
 	margin: 2%;
 	width: 96%;
+	box-shadow: 2px 2px 2px black;
 }
 footer{
 	background-color: #C6d5c5;
@@ -86,12 +92,63 @@ li{
 	display: flex;
 	flex-flow: row wrap;
 }
-div[id*=foto]{
+div[class*=foto]{
 	flex: 1 1 33%;
 	text-align: center;
 }
-@media screen and (max-width: 640px){
+@keyframes inicio-animacion{
+	0%{
+		position: relative;
+		margin-top: 150%;
+	}
+	60%{
+		position: relative;
+		margin-top: -5%;
+	}
+	100%{
+		position: relative;
+		margin-top: 0;
+	}
+}
+header{
+	-webkit-animation-name: inicio-animacion;
+	-webkit-animation-duration: 1s;
+}
+.secundariaDer p img:hover{
+	box-shadow: 2px 2px 2px #82c3a6;
+	transform: translate(20px, -5px);
+}
+.secundariaIzq p img:hover{
+	box-shadow: 2px 2px 2px #82c3a6;
+	transform: rotate(10deg);
+}
+#foto1{
+	-webkit-filter:blur(10px);
+	filter: blur(10px);
+}
+#foto2, #foto4, #foto6{
+	-webkit-filter:grayscale(100%);
+	filter:grayscale(100%);
+}
+#foto3{
+	-webkit-filter:sepia(90%);
+	filter:sepia(90%);
+}
+@media screen and (min-width: 901px){
+	#contenido{
+		margin: 0 auto;
+		box-align:center;
+		width: 900px;
+	}
+	body{
+		box-align:center;
+	}
+}
+@media screen and (max-width: 900px){
 
+	#contenido{
+		width: 100%;
+	}
 	.cabecera div{
 		margin: 0 auto;
 		width: 100%;
@@ -117,8 +174,8 @@ div[id*=foto]{
 	.imagenesSecundarias div{
 		flex: 1 1 100%;
 	}
-	div[id*=foto]{
-	flex: 1 1 100%;
-	text-align: center;
-}
+	div[class*=foto]{
+		flex: 1 1 100%;
+		text-align: center;
+	}
 }
